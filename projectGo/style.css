@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: DFkal-sb, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+p {
+  color: #333030;
+}
+
+h3 {
+  color: #333030;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* 首圖 */
+header div.top {
+  padding: 1rem;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  /* 底部擺放 
+        background-position:bottom ; 
+       不要重複
+        background-repeat: no-repeat;
+    */
+  /* 自動縮放至 填滿畫面 */
+}
+
+header div.top h1 {
+  font: size 2.5rem;
+  font-weight: bolder;
+  color: #333030;
+}
+
+header div.top h3 {
+  font: size 1rem;
+  font-weight: normal;
+  color: #333030;
+}
+
+/* 導覽列背景顏色 */
+header nav {
+  background-color: #e3dede;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  /* 不要有 序列符號 */
+}
+
+header nav ul li {
+  padding: 0.8rem 1.2rem;
+}
+
+nav ul li a {
+  color: #8b8687;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  /*動畫:全部 0.3秒 ease效果的動畫*/
+}
+
+/* 導覽列 滑過去變 黃色 */
+nav ul li a:hover {
+  color: #333030;
+}
+
+/* 點擊時=>變黃色，再次點擊=>變原本的顏色 */
+.active {
+  color: #333030;
+}
+
+/* 設定 Flex 框架 */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main.no-flex {
+  display: block;
+}
+
+/* section 邊界 留1rem */
+main section {
+  padding: 1rem;
+}
+
+main section h3 {
+  font-size: 1.5rem;
+}
+
+/* 寬長佔比整個畫面11 最小200px */
+section.left {
+  flex: 2 1 200px;
+}
+
+/* 圖片佔 section.left 裡面的 90% */
+section.left img {
+  width: 90%;
+}
+
+section.left h3 {
+  margin-bottom: 1rem;
+}
+
+/* table(外部) 跟 上方圖片離得太近了 */
+section.left table {
+  margin-top: 1rem;
+}
+
+/* table(內部) 之間 的間隔為 0.25rem */
+section.left table,
+tr,
+td {
+  padding: 0.25rem;
+}
+
+/* 寬長佔比整個畫面41 最小500px */
+section.right {
+  flex: 3 1 500px;
+}
+
+/* 右邊 的h3 字體設定 */
+section.right h3 {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* 只要遇到 p標籤 即設定為
+   上下0.5rem 左右0rem*/
+p {
+  padding: 0.5rem 0rem;
+}
+
+/* 序列項目中的 外框架 左邊 空2rem(等於 往右邊 移動2rem) */
+section.right ul {
+  margin-left: 2rem;
+}
+
+/* korea */
+.player {
+  margin: 2rem;
+  /* border: 4px solid burlywood; */
+  background-color: #333030;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.player hr {
+  margin-top: 0.5rem;
+  border: 0.5px solid #fff1b9;
+}
+
+.player h4 {
+  font-size: 1.2rem;
+  color: #fff1b9;
+}
+
+.player h5 {
+  font-size: 1rem;
+  color: #fff1b9;
+}
+
+.player p {
+  color: #e3dede;
+  font-size: 1rem;
+}
+
+/* japan 
+設定為 flex*/
+div.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+div.japan img {
+  flex: 1 1 300px;
+  max-width: 60vh;
+}
+
+div.japan.info {
+  flex: 3 1 600px;
+  padding: 2rem;
+}
+
+/* japan 下半部 */
+div.competition {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+div.competition div.text {
+  flex: 5 1 300px;
+  padding: 1rem;
+}
+
+div.competition div.text h3 {
+  font-size: 2rem;
+  color: (12, 122, 92);
+}
+
+/* 圓餅圖 */
+#piechart {
+  flex: 1 1 300px;
+  color: #333030;
+}
+
+li {
+  margin-left: 1rem;
+  color: #333030;
+  /* list-sytle:none; */
+}
+
+figcaption {
+  color: #8b8687;
+}
+
+td {
+  color: #8b8687;
+}
+
+/* 台灣 */
+section.taiwan li {
+  color: #8b8687;
+}
+
+
+
+/* 導覽列 media 設定:600px 內變成直向 */
+@media screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+  }
+}
